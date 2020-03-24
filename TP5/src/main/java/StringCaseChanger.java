@@ -10,12 +10,14 @@ public class StringCaseChanger implements StringTransformer
         for (int i = 0; i < chars.length; i++)
         {
             if (Character.isLowerCase(chars[i]))
-                Character.toUpperCase(chars[i]);
+                chars[i] = Character.toUpperCase(chars[i]);
 
             else
-                Character.toLowerCase(chars[i]);
+                chars[i] = Character.toLowerCase(chars[i]);
         }
 
-        drink.setText(chars.toString());
+        String s = new String(chars);
+
+        drink.setText(s);
     }
 }
